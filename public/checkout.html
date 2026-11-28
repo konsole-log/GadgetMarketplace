@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout — Jhilko</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&display=swap">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="/" class="wordmark">Jhilko</a>
+    <nav class="header-nav" aria-label="Main">
+      <a href="/">Back to shop</a>
+    </nav>
+  </header>
+
+  <main class="checkout">
+    <form id="checkout-form" class="checkout-form" novalidate>
+      <h1>Checkout</h1>
+
+      <fieldset>
+        <legend>Where should we deliver?</legend>
+        <label>Full name
+          <input name="name" autocomplete="name" required maxlength="100">
+        </label>
+        <div class="field-pair">
+          <label>Mobile number
+            <input name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="98XXXXXXXX" required pattern="9[678][0-9]{8}">
+          </label>
+          <label>Email
+            <input name="email" type="email" autocomplete="email" required>
+          </label>
+        </div>
+        <label>Address
+          <textarea name="address" rows="3" autocomplete="street-address" required maxlength="300" placeholder="Tole, ward, city, and a landmark the rider can find"></textarea>
+        </label>
+      </fieldset>
