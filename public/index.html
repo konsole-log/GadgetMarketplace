@@ -11,3 +11,67 @@
   <link rel="preconnect" href="https://images.pexels.com">
   <link rel="stylesheet" href="/styles.css">
 </head>
+<body class="home">
+  <a class="skip" href="#shop">Skip to products</a>
+
+  <header class="site-header on-yellow">
+    <a href="/" class="wordmark">Jhilko</a>
+    <nav class="header-nav" aria-label="Main">
+      <a href="#shop">Shop</a>
+      <button id="cart-button" class="cart-button" aria-haspopup="dialog" aria-controls="cart">
+        Cart <span class="count" data-cart-count hidden>0</span>
+      </button>
+    </nav>
+  </header>
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <h1 id="hero-title">Gadgets worth carrying.</h1>
+      <p>Earbuds, chargers, keyboards and the small things that keep your day running. Delivered across the Kathmandu Valley in one or two days.</p>
+      <a href="#shop" class="button button-ink">Browse the shelf</a>
+    </div>
+    <div class="hero-photo">
+      <img src="https://images.pexels.com/photos/33797659/pexels-photo-33797659.jpeg?auto=compress&cs=tinysrgb&w=1600"
+           alt="A pair of black wireless earbuds lying on a yellow surface" width="1600" height="1200" fetchpriority="high">
+    </div>
+  </section>
+
+  <ul class="promises" aria-label="Why shop here">
+    <li><strong>Pay with eSewa</strong><span>Checkout takes under a minute.</span></li>
+    <li><strong>Valley delivery</strong><span>Kathmandu, Lalitpur and Bhaktapur in 1–2 days.</span></li>
+    <li><strong>7-day returns</strong><span>Unopened and not for you? Send it back.</span></li>
+  </ul>
+
+  <main id="shop" class="shop">
+    <div class="shop-head">
+      <h2>The shelf</h2>
+      <div id="filters" class="filters" role="tablist" aria-label="Categories"></div>
+    </div>
+    <div id="products" class="products" aria-live="polite">
+      <p class="muted">Loading products…</p>
+    </div>
+  </main>
+
+  <!-- Cart drawer -->
+  <div id="overlay" class="overlay" hidden></div>
+  <aside id="cart" class="drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" hidden>
+    <div class="drawer-head">
+      <h2 id="cart-title">Your cart</h2>
+      <button id="close-cart" class="close" aria-label="Close cart">Close</button>
+    </div>
+    <div id="cart-lines" class="cart-lines"></div>
+    <div class="drawer-foot">
+      <div class="total-row"><span>Total</span><strong id="cart-total">Rs 0</strong></div>
+      <a id="checkout-link" href="/checkout.html" class="button button-ink button-block">Checkout</a>
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <span class="wordmark small">Jhilko</span>
+    <p>A demo store. Payments run in eSewa's test environment, so no real money moves. Product photos from <a href="https://www.pexels.com" rel="noopener">Pexels</a>.</p>
+  </footer>
+
+  <script src="/common.js"></script>
+  <script src="/shop.js"></script>
+</body>
+</html>
