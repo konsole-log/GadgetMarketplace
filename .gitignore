@@ -1,0 +1,4 @@
+.env
+store.db
+store.db-*
+node_modules/
