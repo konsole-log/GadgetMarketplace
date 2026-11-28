@@ -1,3 +1,4 @@
+// Checkout: show summary, validate, create order, hand off to eSewa.
 let total = 0;
 
 async function init() {
@@ -54,6 +55,8 @@ document.getElementById('checkout-form').addEventListener('submit', async (e) =>
         },
       }),
     });
+
+    // eSewa needs a real form POST, so fill the hidden form and submit it.
     const f = document.getElementById('esewa-form');
     f.action = result.form.action;
     f.replaceChildren(
