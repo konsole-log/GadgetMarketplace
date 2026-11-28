@@ -38,3 +38,33 @@
           <textarea name="address" rows="3" autocomplete="street-address" required maxlength="300" placeholder="Tole, ward, city, and a landmark the rider can find"></textarea>
         </label>
       </fieldset>
+ <fieldset>
+        <legend>Payment</legend>
+        <div class="pay-method">
+          <span class="esewa-mark" aria-hidden="true">e</span>
+          <div>
+            <strong>eSewa</strong>
+            <p class="muted">You'll log in to eSewa to confirm, then come straight back here.</p>
+          </div>
+        </div>
+      </fieldset>
+
+      <p id="form-error" class="form-error" role="alert" hidden></p>
+      <button id="pay-button" type="submit" class="button button-esewa button-block">Pay with eSewa</button>
+    </form>
+
+    <aside class="order-summary" aria-labelledby="summary-title">
+      <h2 id="summary-title">Your order</h2>
+      <div id="summary-lines"></div>
+      <div class="summary-row"><span>Delivery</span><span>Free</span></div>
+      <div class="summary-row summary-total"><span>Total</span><strong id="summary-total">Rs 0</strong></div>
+    </aside>
+  </main>
+
+  <!-- Hidden form used to POST to eSewa (filled in by checkout.js) -->
+  <form id="esewa-form" method="POST" hidden></form>
+
+  <script src="/common.js"></script>
+  <script src="/checkout.js"></script>
+</body>
+</html>
